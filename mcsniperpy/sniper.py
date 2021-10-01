@@ -16,7 +16,7 @@ class Sniper:
         self.color = colorer
         self.log = logger
         self.session = request_manager.RequestManager(
-            # aiohttp.ClientSession(connector=aiohttp.TCPConnector(limit=300),headers={})
+             aiohttp.ClientSession(connector=aiohttp.TCPConnector(limit=300),headers={})
             None
         )
 
@@ -44,7 +44,7 @@ class Sniper:
 
         # skin
 
-        self.change_skin_on_snipe = False
+        self.change_skin_on_snipe = True
         self.skin_change_type = "url"
         self.skin = ""
         self.skin_variant = "classic"
